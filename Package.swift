@@ -46,6 +46,7 @@ let package = Package(
     .package(url: "https://github.com/pointfreeco/swift-dependencies", exact: "1.3.3"),
     .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
     .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", exact: "1.1.2"),
+    .package(url: "https://github.com/pointfreeco/swift-issue-reporting", exact: "1.2.0"),
   ],
   targets: [
 
@@ -54,6 +55,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
         "DependenciesAdditionsBasics",
       ]
     ),
@@ -68,6 +70,7 @@ let package = Package(
       name: "ApplicationDependency",
       dependencies: [
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
         .product(name: "Dependencies", package: "swift-dependencies"),
         "DependenciesAdditionsBasics",
       ]
@@ -84,6 +87,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
         "DependenciesAdditionsBasics",
         "UserDefaultsDependency",
       ]
@@ -100,6 +104,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
         "DependenciesAdditionsBasics",
       ]
     ),
@@ -115,6 +120,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
       ]
     ),
     .testTarget(
@@ -129,6 +135,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
       ]
     ),
     .testTarget(
@@ -181,6 +188,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
       ]
     ),
 
@@ -188,6 +196,7 @@ let package = Package(
       name: "DependenciesAdditionsBasicsTests",
       dependencies: [
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
         "DependenciesAdditionsBasics",
       ]
     ),
@@ -197,6 +206,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
       ]
     ),
 
@@ -213,6 +223,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
         "DependenciesAdditionsBasics",
       ]
     ),
@@ -229,6 +240,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
         "BundleDependency",
       ]
     ),
@@ -263,6 +275,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
       ]
     ),
 
@@ -279,6 +292,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
       ]
     ),
 
@@ -311,6 +325,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
         "DependenciesAdditionsBasics",
       ]
     ),
@@ -357,6 +372,7 @@ let package = Package(
       dependencies: [
         .product(name: "Dependencies", package: "swift-dependencies"),
         .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+        .product(name: "XCTestDynamicOverlay", package: "swift-issue-reporting", moduleAliases: ["XCTestDynamicOverlay": "XCTestDynamicOverlayAlias"]),
         "DependenciesAdditionsBasics",
       ]
     ),
